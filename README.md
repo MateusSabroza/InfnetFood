@@ -118,6 +118,28 @@ infnetfood/
 
 ## Capturas de Tela
 
+![[Screenshot_20260621_200354_Expo Go.jpg]]
+![[Screenshot_20260621_194258_Expo Go.jpg]]
+![[Screenshot_20260621_194308_Expo Go.jpg]]
+![[Screenshot_20260621_194315_Expo Go.jpg]]
+![[Screenshot_20260621_194328_Expo Go.jpg]]
+![[Screenshot_20260621_194335_Expo Go.jpg]]
+![[Screenshot_20260621_194339_Expo Go.jpg]]
+![[Screenshot_20260621_194345_Expo Go.jpg]]
+![[Screenshot_20260621_194349_Expo Go.jpg]]
+![[Screenshot_20260621_200204_Expo Go.jpg]]
+![[Screenshot_20260621_200218_Expo Go.jpg]]
+![[Screenshot_20260621_200226_Expo Go.jpg]]
+![[Screenshot_20260621_200230_Expo Go.jpg]]
+![[Screenshot_20260621_200237_Expo Go.jpg]]
+![[Screenshot_20260621_200244_Expo Go.jpg]]
+![[Screenshot_20260621_200252_Expo Go.jpg]]
+![[Screenshot_20260621_200259_Expo Go.jpg]]
+![[Screenshot_20260621_200304_Expo Go.jpg]]
+![[Screenshot_20260621_200317_Expo Go.jpg]]
+![[Screenshot_20260621_200328_Maps.jpg]]
+![[Screenshot_20260621_200350_Expo Go.jpg]]
+
 
 ## Autor
 

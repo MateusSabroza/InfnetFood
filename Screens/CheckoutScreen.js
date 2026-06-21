@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import {
   StyleSheet, View, Text, TextInput, TouchableOpacity, ScrollView, Animated, ActivityIndicator,
 } from 'react-native';
@@ -20,6 +20,13 @@ export default function CheckoutScreen({ navigation }) {
 
   const fadeAnim = useRef(new Animated.Value(1)).current;
 
+
+  useEffect(() => {
+    if (cep.replace(/\D/g, '').length === 8) {
+      handleBuscarCep();
+    }
+  }, [cep]);
+
   const handleBuscarCep = async () => {
     if (cep.replace(/\D/g, '').length !== 8) {
       setErro('Digite um CEP válido com 8 números.');
@@ -36,6 +43,7 @@ export default function CheckoutScreen({ navigation }) {
       setBuscandoCep(false);
     }
   };
+
 
   const confirmarPedido = () => {
     if (!endereco.trim() || !numero.trim()) {
@@ -84,24 +92,17 @@ export default function CheckoutScreen({ navigation }) {
 
       <Text style={styles.secao}>Endereço de Entrega</Text>
 
-      <View style={styles.cepRow}>
-        <TextInput
-          style={[styles.input, styles.inputCep]}
-          placeholder="CEP (somente números)"
-          placeholderTextColor="#B59173"
-          value={cep}
-          onChangeText={setCep}
-          keyboardType="numeric"
-          maxLength={8}
-        />
-        <TouchableOpacity style={styles.botaoCep} onPress={handleBuscarCep} disabled={buscandoCep}>
-          {buscandoCep ? (
-            <ActivityIndicator color="#1F1817" size="small" />
-          ) : (
-            <Text style={styles.botaoCepTexto}>Buscar</Text>
-          )}
-        </TouchableOpacity>
-      </View>
+      <TextInput
+        style={styles.input}
+        placeholder="CEP (somente números)"
+        placeholderTextColor="#B59173"
+        value={cep}
+        onChangeText={setCep}
+        keyboardType="numeric"
+        maxLength={8}
+      />
+      {buscandoCep && <ActivityIndicator color="#B59173" size="small" style={{ marginBottom: 12 }} />}
+    
 
       <TextInput
         style={styles.input}
@@ -240,6 +241,9 @@ const styles = StyleSheet.create({
     padding: 16, 
     borderRadius: 10, 
     alignItems: 'center' },
+  botaoBuscar:{
+
+    },
   textoBotao: { 
     color: '#1F1817', 
     fontWeight: 'bold', 
